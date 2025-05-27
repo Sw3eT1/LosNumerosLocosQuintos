@@ -1,5 +1,4 @@
 from time import sleep
-import numpy as np
 from horner import horner
 from approximation import *  # Importujemy funkcje do aproksymacji
 from plotter import plot_approximation  # Funkcja do rysowania wykresów
@@ -47,7 +46,7 @@ def main():
         degree, coeffs, legendre_polys, approx, error = auto_approximate(f, a, b, tol)
 
     print(f"\nDone! Degree = {degree}, Error = {error:.6f}")
-    plot_approximation(f, approx, a, b)  # Rysujemy wykres oryginału i aproksymacji
+    plot_approximation(f, approx, a, b, degree, desc, error)  # Rysujemy wykres oryginału i aproksymacji
 
 if __name__ == "__main__":
     main()  # Punkt startowy programu
